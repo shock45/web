@@ -284,8 +284,8 @@ document.addEventListener("DOMContentLoaded", function () {
  
          .dropdown-menu {
              position: absolute;
-             top: calc(100% + 10px);
-             right: 0;
+             top: calc(100% + 14px);
+             left: -7px;
              background-color: white;
              border-radius: 8px;
              box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
@@ -301,7 +301,7 @@ document.addEventListener("DOMContentLoaded", function () {
              content: '';
              position: absolute;
              top: -8px;
-             right: 20px;
+             left: 20px;
              width: 16px;
              height: 16px;
              background-color: white;
