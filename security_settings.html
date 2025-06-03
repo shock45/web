@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>הגדרות אבטחה - התקווה 8</title>
+    <link rel="stylesheet" href="main.css" />
+    <link rel="stylesheet" href="personal_info.css" />
+    <link rel="stylesheet" href="footer.css" />
+    <script src="header.js" defer></script>
+    <script src="footer.js" defer></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <main class="container">
+      <div class="page-header">
+        <a href="dashboard.html" class="back-button">
+          <i class="fas fa-arrow-right"></i>
+          חזרה ללוח הבקרה
+        </a>
+        <h1>הגדרות אבטחה</h1>
+      </div>
+
+      <div class="content-wrapper">
+        <div class="form-card">
+          <form id="securityForm" class="security-form">
+            <div class="form-section">
+              <h2>שינוי סיסמה</h2>
+              <div class="form-group">
+                <label for="currentPassword">סיסמה נוכחית</label>
+                <div class="input-wrapper">
+                  <i class="fas fa-lock"></i>
+                  <input
+                    type="password"
+                    id="currentPassword"
+                    name="currentPassword"
+                    required
+                  />
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="newPassword">סיסמה חדשה</label>
+                <div class="input-wrapper">
+                  <i class="fas fa-key"></i>
+                  <input
+                    type="password"
+                    id="newPassword"
+                    name="newPassword"
+                    required
+                    pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$"
+                    title="הסיסמה חייבת להכיל לפחות 8 תווים, אות אחת ומספר אחד"
+                  />
+                </div>
+                <div class="password-requirements">
+                  <p>דרישות סיסמה:</p>
+                  <ul>
+                    <li>לפחות 8 תווים</li>
+                    <li>לפחות אות אחת</li>
+                    <li>לפחות מספר אחד</li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="confirmPassword">אימות סיסמה חדשה</label>
+                <div class="input-wrapper">
+                  <i class="fas fa-check-circle"></i>
+                  <input
+                    type="password"
+                    id="confirmPassword"
+                    name="confirmPassword"
+                    required
+                  />
+                </div>
+              </div>
+            </div>
+
+            <div class="form-section">
+              <h2>הגדרות אבטחה נוספות</h2>
+              <div class="form-group">
+                <label class="checkbox-label">
+                  <input type="checkbox" id="twoFactor" name="twoFactor" />
+                  <span>הפעלת אימות דו-שלבי</span>
+                </label>
+                <p class="setting-description">
+                  קבלת קוד אימות לנייד בכל התחברות
+                </p>
+              </div>
+
+              <div class="form-group">
+                <label class="checkbox-label">
+                  <input type="checkbox" id="loginAlerts" name="loginAlerts" />
+                  <span>התראות התחברות</span>
+                </label>
+                <p class="setting-description">
+                  קבלת התראה בכל התחברות ממועד חדש
+                </p>
+              </div>
+
+              <div class="form-group">
+                <label class="checkbox-label">
+                  <input
+                    type="checkbox"
+                    id="rememberDevices"
+                    name="rememberDevices"
+                  />
+                  <span>זכור מכשירים</span>
+                </label>
+                <p class="setting-description">
+                  שמירת מכשירים מאומתים למשך 30 יום
+                </p>
+              </div>
+            </div>
+
+            <div class="form-actions">
+              <button type="button" class="cancel-button">ביטול</button>
+              <button type="submit" class="save-button">שמור שינויים</button>
+            </div>
+          </form>
+        </div>
+
+        <div class="info-card">
+          <div class="info-section">
+            <h3><i class="fas fa-shield-alt"></i> טיפים לאבטחה</h3>
+            <ul>
+              <li>השתמש בסיסמה חזקה וייחודית</li>
+              <li>הפעל אימות דו-שלבי להגנה נוספת</li>
+              <li>בדוק באופן קבוע את פעילות החשבון שלך</li>
+              <li>התנתק תמיד כשאתה מסיים להשתמש במערכת</li>
+            </ul>
+          </div>
+
+          <div class="info-section">
+            <h3><i class="fas fa-history"></i> פעילות אחרונה</h3>
+            <ul class="activity-list">
+              <li>
+                <span class="activity-time">היום, 14:30</span>
+                <span class="activity-desc">התחברות מנייד</span>
+              </li>
+              <li>
+                <span class="activity-time">אתמול, 09:15</span>
+                <span class="activity-desc">שינוי הגדרות אבטחה</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      document
+        .getElementById("securityForm")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+
+          const newPassword = document.getElementById("newPassword").value;
+          const confirmPassword =
+            document.getElementById("confirmPassword").value;
+
+          if (newPassword !== confirmPassword) {
+            alert("הסיסמאות החדשות אינן תואמות");
+            return;
+          }
+
+          // Here you would typically handle the form submission
+          alert("השינויים נשמרו בהצלחה!");
+        });
+
+      document
+        .querySelector(".cancel-button")
+        .addEventListener("click", function () {
+          if (confirm("האם אתה בטוח שברצונך לבטל את השינויים?")) {
+            window.location.href = "dashboard.html";
+          }
+        });
+    </script>
+  </body>
+</html>

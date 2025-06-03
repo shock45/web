@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>התקווה 8 - פלטפורמה ליוזמות חברתיות</title>
+    <link rel="stylesheet" href="main.css" />
+    <link rel="stylesheet" href="footer.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <!-- Firebase SDKs -->
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
+  </head>
+  <body>
+    <section class="hero">
+      <div class="container">
+        <h1>יוצרים ביחד עתיד טוב יותר</h1>
+        <p>
+          פלטפורמת "התקווה 8" מחברת בין יזמים חברתיים לבין שותפים - מתנדבים,
+          עמותות וארגונים שרוצים לקחת חלק וליצור שינוי. אנחנו מאמינים שביחד,
+          אנחנו יכולים ליצור השפעה משמעותית.
+        </p>
+        <div class="buttons">
+          <a href="yozmot.html" class="btn">יש לי יוזמה</a>
+          <a href="search.html" class="btn btn-secondary">רוצה להיות שותף</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="features">
+      <div class="container">
+        <h2 class="section-title">למי מיועדת הפלטפורמה?</h2>
+        <div class="features-container">
+          <div class="feature-box" id="yozma">
+            <div class="feature-icon">💡</div>
+            <h3>ליזמים</h3>
+            <p>
+              יש לך רעיון ליוזמה חברתית? מחפש שותפים לחזון שלך? פלטפורמת "התקווה
+              8" מאפשרת לך להציג את היוזמה שלך, לגייס שותפים ולהוציא את החזון
+              לפועל.
+            </p>
+            <a href="yozmot.html" class="btn btn-secondary">הצג את היוזמה שלך</a>
+          </div>
+          <div class="feature-box" id="partner">
+            <div class="feature-icon">🤝</div>
+            <h3>לשותפים</h3>
+            <p>
+              מחפש דרך לתרום ולהשפיע? רוצה להיות חלק מיוזמות משמעותיות? כשותף,
+              תוכל למצוא יוזמות שמתאימות לכישורים ולתחומי העניין שלך ולהצטרף
+              אליהן.
+            </p>
+            <a href="search.html" class="btn btn-secondary">הצטרף כשותף</a>
+          </div>
+          <div class="feature-box">
+            <div class="feature-icon">🏢</div>
+            <h3>לארגונים ועמותות</h3>
+            <p>
+              מחפשים פרויקטים להשקיע בהם? רוצים להרחיב את ההשפעה החברתית שלכם?
+              הפלטפורמה מאפשרת לכם לחבור ליוזמות קיימות או להציע משאבים ליזמים.
+            </p>
+            <a href="#" class="btn btn-secondary">הצטרפו כארגון</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="how-it-works">
+      <div class="container">
+        <h2 class="section-title">איך זה עובד?</h2>
+        <div class="steps">
+          <div class="step">
+            <div class="step-number">1</div>
+            <h3>הצגת יוזמה או הרשמה כשותף</h3>
+            <p>
+              יזמים מציגים את היוזמות שלהם בפלטפורמה. שותפים פוטנציאליים נרשמים
+              ומציינים את הכישורים והעניין שלהם.
+            </p>
+          </div>
+          <div class="step">
+            <div class="step-number">2</div>
+            <h3>חיבור והתאמה</h3>
+            <p>
+              המערכת מחברת בין יזמים לשותפים פוטנציאליים על בסיס התאמה בין צרכי
+              היוזמה לכישורי השותפים.
+            </p>
+          </div>
+          <div class="step">
+            <div class="step-number">3</div>
+            <h3>שיתוף פעולה וצמיחה</h3>
+            <p>
+              יחד, היזמים והשותפים עובדים על קידום היוזמה, מתכננים ומבצעים
+              פעולות ליצירת שינוי חברתי משמעותי.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="testimonials">
+      <div class="container">
+        <h2 class="section-title">סיפורי הצלחה</h2>
+        <div class="testimonial-container">
+          <div class="testimonial">
+            <p class="testimonial-text">
+              "דרך התקווה 8 מצאתי שותפים נהדרים ליוזמה שלי לקידום חינוך טכנולוגי
+              בפריפריה. בתוך חודשיים הצלחנו להקים 3 מרכזי למידה חדשים!"
+            </p>
+            <p class="testimonial-author">- רונית כהן, יזמת חברתית</p>
+          </div>
+          <div class="testimonial">
+            <p class="testimonial-text">
+              " בשיקום העיר כתושבת קרית שמונה, מדריכה באחרייטק ושותפה שנה שניה בתוצרת הארץ התקווה 8 עזרה לי ליצור קשרים בין אחרייטק לעמותות נוספות שיכולות לסייע "
+            </p>
+            <p class="testimonial-author">- לוטם טובול, יזמית</p>
+          </div>
+          <div class="testimonial">
+            <p class="testimonial-text">
+              "כעמותה שלאחר המלחמה סייעה רבות לקרית שמונה בזכות התקווה 8, נוכחתי לדעת שיש עוד מיזמים שקשורים לעיר שאנו יכולים לסייע גם בהם."
+            </p>
+            <p class="testimonial-author">-יובל ממן, מנהלת תוצרת הארץ  </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta">
+      <div class="container">
+        <div class="container1">
+          <div class="text-bubble">
+              <h2>החזון שלנו</h2>
+              <a href="main.html">
+                  <img src="x.png" alt="hazon" class="hazon-x">
+              </a>
+              <p>אנחנו מאמינים בכוחה של הקהילה ליצור שינוי משמעותי. פלטפורמת "התקווה 8" נוצרה כדי לחבר בין יזמים חברתיים לבין שותפים פוטנציאליים, ולאפשר להם יחד ליצור השפעה חיובית על החברה.</p>
+              <p>המטרה שלנו היא ליצור מרחב שבו רעיונות יכולים לצמוח, שיתופי פעולה יכולים להתפתח, וכל אחד יכול לתרום את חלקו ליצירת עתיד טוב יותר.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script type="module" src="js/auth.js"></script>
+    <script type="module" src="header.js"></script>
+    <script type="module" src="footer.js"></script>
+  </body>
+</html>

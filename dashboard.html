@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>לוח בקרה - יוזמות</title>
+    <link rel="stylesheet" href="main.css" />
+    <link rel="stylesheet" href="dashboard.css" />
+    <link rel="stylesheet" href="footer.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <!-- Firebase SDKs -->
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
+  </head>
+  <body>
+    <main class="container">
+      <div class="dashboard-header">
+        <h1>לוח בקרה</h1>
+      </div>
+
+      <div id="dashboard-content">
+        <div class="dashboard-container">
+          <!-- Profile Section -->
+          <div class="profile-settings-card">
+            <div class="profile-header">
+              <img src="assets/default-avatar.png" alt="תמונת פרופיל" id="profileImage" class="profile-image" />
+              <div class="user-info">
+                <h2 id="userName">טוען...</h2>
+                <p id="userEmail">טוען...</p>
+              </div>
+            </div>
+
+            <!-- Quick Stats -->
+            <div class="quick-stats">
+              <div class="stat-item">
+                <i class="fas fa-tasks"></i>
+                <div class="stat-info">
+                  <span class="stat-value">85%</span>
+                  <span class="stat-label">השלמת משימות</span>
+                </div>
+              </div>
+              <div class="stat-item">
+                <i class="fas fa-project-diagram"></i>
+                <div class="stat-info">
+                  <span class="stat-value">12</span>
+                  <span class="stat-label">פרויקטים פעילים</span>
+                </div>
+              </div>
+              <div class="stat-item">
+                <i class="fas fa-envelope"></i>
+                <div class="stat-info">
+                  <span class="stat-value">24</span>
+                  <span class="stat-label">הודעות חדשות</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Settings Menu -->
+            <div class="settings-menu">
+              <h3>הגדרות</h3>
+              <div class="settings-group">
+                <a href="personal_info.html" class="settings-item">
+                  <div class="settings-icon">
+                    <i class="fas fa-user"></i>
+                  </div>
+                  <div class="settings-content">
+                    <h4>פרטים אישיים</h4>
+                    <p>עדכון פרטים אישיים</p>
+                  </div>
+                  <i class="fas fa-chevron-left settings-arrow"></i>
+                </a>
+
+                <a href="#" class="settings-item">
+                  <div class="settings-icon">
+                    <i class="fas fa-lock"></i>
+                  </div>
+                  <div class="settings-content">
+                    <h4>אבטחה</h4>
+                    <p>הגדרות אבטחה</p>
+                  </div>
+                  <i class="fas fa-chevron-left settings-arrow"></i>
+                </a>
+
+                <a href="#" class="settings-item">
+                  <div class="settings-icon">
+                    <i class="fas fa-bell"></i>
+                  </div>
+                  <div class="settings-content">
+                    <h4>התראות</h4>
+                    <p>הגדרות התראות</p>
+                  </div>
+                  <i class="fas fa-chevron-left settings-arrow"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Activity Section -->
+          <div class="activity-section">
+            <div class="dashboard-card">
+              <h3>פעילות אחרונה</h3>
+              <ul class="activity-list">
+                <li class="activity-item">
+                  <div class="activity-icon">
+                    <i class="fas fa-file-alt"></i>
+                  </div>
+                  <div class="activity-content">
+                    <h4>עדכון פרויקט חדש</h4>
+                    <p>לפני 2 שעות</p>
+                  </div>
+                </li>
+                <li class="activity-item">
+                  <div class="activity-icon">
+                    <i class="fas fa-comment"></i>
+                  </div>
+                  <div class="activity-content">
+                    <h4>הודעה חדשה</h4>
+                    <p>לפני 4 שעות</p>
+                  </div>
+                </li>
+                <li class="activity-item">
+                  <div class="activity-icon">
+                    <i class="fas fa-check-circle"></i>
+                  </div>
+                  <div class="activity-content">
+                    <h4>משימה הושלמה</h4>
+                    <p>לפני 6 שעות</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script type="module" src="js/auth.js"></script>
+    <script type="module" src="header.js"></script>
+    <script type="module" src="footer.js"></script>
+    <script type="module" src="dashboard.js"></script>
+  </body>
+</html>
